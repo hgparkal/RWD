@@ -1,1 +1,41 @@
-/* css 파일 */
+@charset "utf-8";
+@import url(./normalize.css);
+
+.container{
+  background-color: silver; 
+  display: flex;
+ /* flex-direction: row;
+  flex-wrap: wrap; */
+  flex-flow: row wrap;
+}
+ .container > *{
+  /* flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto; */
+  flex: 0 1 auto;
+} 
+
+.header, .navigation, .main, .footer {
+  width: 100%;
+}
+.header{
+  background-color: yellowgreen;
+  height: 10vh;
+}
+.navigation{
+  background-color: pink;
+  height: 20vh;
+  width: 30%;
+}
+.main{
+  background-color: skyblue;
+  height: 60vh;
+  width : 70%;
+}
+.footer{
+  background-color: orange;
+  height: 10vh;
+}
+
+
+
