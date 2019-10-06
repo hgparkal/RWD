@@ -91,7 +91,7 @@
   .main{
     grid-auto-rows: minmax(50px, auto);
     grid-template-columns: repeat(4, 25%);  
-     grid-column-gap: 20px;
+    /* grid-column-gap: 20px; */
   }
   .news{
     /* grid-row-start: 3;
@@ -128,7 +128,7 @@
   .main{
     grid-auto-rows: minmax(100px, auto);
     grid-template-columns: repeat(8, 11.1875%);
-    grid-column-gap: 1.5%;
+    /* grid-column-gap: 1.5%; */
   }
 
   .news{
