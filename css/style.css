@@ -39,6 +39,75 @@ legend, .a11y-hidden{
   clip: rect(0,0,0,0);
   clip-path: polygon(0 0, 0 0, 0 0);
 }
+
+/* 공통 스타일 모듈 */
+.responsive{
+  max-width: 100%;
+  height: auto;
+}
+.en-block{
+  display: block;
+  font-weight: 400;
+  font-size: 1.7rem;
+}
+.ir{
+  background: url(./images/sprite_main.png) no-repeat;
+  padding-left: 65px;
+  min-height: 60px;
+}
+.ir-book{
+  background-position: 0 0;
+}
+.ir-news{
+  background-position: 0 -230px;
+}
+.ir-board{
+  background-position: 0 -115px;
+}
+.ir-favorite{
+  background-position: 0 -345px;
+}
+.ir-twitter{
+  background-position: 0 -460px;
+}
+
+.point-color-green{
+  color : #abd375;
+}
+.point-color-yellow{
+  color : #e8ca58;
+}
+.point-color-brown{
+  color : #c7b39a;
+}
+.point-color-skyblue{
+  color : #6aaee6;
+}
+.point-color-orange{
+  color : #eea60a;
+}
+.iframe-container{
+    width: 100%;
+    height: 0 !important;
+    position: relative;
+}
+.video-4-3{
+  padding-top: 75%;
+}
+.video-16-9{
+  padding-top: 56.25%;
+}
+.video-21-9{
+  padding-top: 42.8571428571428545%;
+}
+.iframe-video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 /* All Device */
 .container{
   display: flex;
@@ -97,30 +166,48 @@ input[type="search"]:focus:-moz-placeholder { /* Firefox 18- */
   color: transparent;
 }
 
+/* 공통메인 */
 .main{
-  background-color: skyblue;
-  height: 60vh;
   display: flex;
   flex-flow: row wrap;
 }
 .book, .news, .board, .favorite, .twitter{
   width: 100%;
 }
-.book{
-  background-color: blueviolet;
+.main [class*="-heading"]{
+  font-weight: 700;
+  font-size: 1.8em;
 }
-.news{
-  background-color: orangered;
+
+ /* 공통 추천서적 */
+.book-cover{
+  text-align: center;
+  font-weight: 400;
 }
-.board{
-  background-color: teal;
+.book-detail{
+  text-align: center;
 }
-.favorite{
-  background-color: goldenrod;
+.book-detail *{
+  margin: 0;
+  display: inline;
 }
-.twitter{
-  background-color: aqua;
+.book-detail [aria-laber]{
+  display: block;
+  font-size: 2.5rem;
 }
+
+ /* 공통 새소식 */
+.news-date{
+  display: block;
+  text-align: right;
+}
+
+ /* 공통 게시판 */
+
+/* 공통 인기 사이트 */
+
+/* 공통 트위터 */
+
 .footer{
   background-color: purple;
   height: 10vh;
@@ -178,6 +265,7 @@ input[type="search"]:focus:-moz-placeholder { /* Firefox 18- */
     background: url(./images/btn_search.png) no-repeat 0 0 / cover;
   }
   /* 모바일 네비게이션 */
+
   .btn-menubar{
     background: transparent;
     width: 3rem;
@@ -222,20 +310,24 @@ input[type="search"]:focus:-moz-placeholder { /* Firefox 18- */
     transform: translateY(-50%) rotate(-45deg);
   }
   .menu{
-    color: #fff;
-    background-color: rgba(0,0,0,0.85);
-    margin: 0;
     position: fixed;
     top: 0;
     left: 0;
-    width: 80%;
-    height: 100vh;
-    padding: 2em 1em;
+    overflow: hidden;
+    width: 0;
     list-style: none;
     transform: translateX(-100%);
     transition: all 0.2s;
+    color: transparent;
   }
   .nav-act .menu{
+    padding: 2em 1em;
+    color: #fff;
+    background-color: rgba(0,0,0,0.85);
+    margin: 0;
+    width: 0;
+    height: 100vh;
+    padding: 0;
     transform: none;
   }
 
